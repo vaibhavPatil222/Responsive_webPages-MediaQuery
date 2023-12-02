@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Make the two-column layout from assignment 2 responsive. The sidebar should collapse
+        into the top on small screens, and the content area should take up the full width.</title>
+        <style>
+            body {
+              margin: 0;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .sidebar {
+              margin: 0;
+              padding: 0;
+              width: 200px;
+              background-color: #d58d8d;
+              position: fixed;
+              height: 100%;
+              overflow: auto;
+            }
+            
+            .sidebar a {
+              display: block;
+              color: black;
+              padding: 16px;
+              text-decoration: none;
+            }
+             
+            .sidebar a.active {
+              background-color: #04AA6D;
+              color: rgb(232, 90, 90);
+            }
+            
+            .sidebar a:hover:not(.active) {
+              background-color: #053efa;
+              color: rgb(229, 86, 86);
+            }
+            
+            div.content {
+              margin-left: 200px;
+              padding: 1px 16px;
+              height: 1000px;
+              background-color: burlywood;
+            }
+            
+            @media screen and (max-width: 700px) {
+              .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+              }
+              .sidebar a {float: left;}
+              div.content {margin-left: 0;}
+            }
+            
+            @media screen and (max-width: 400px) {
+              .sidebar a {
+                text-align: center;
+                float: none;
+              }
+            }
+            </style>
+</head>
+<body>
+
+    <div class="sidebar">
+      <a class="active" href="#Key resource">Key resource</a>
+      <a href="#tutorials">tutorials</a>
+      <a href="#referance">referance</a>
+      <a href="#development tool">development tool</a>
+    </div>
+    
+    <div class="content">
+      <h2>CSS: Cascading Style Sheets</h2>
+      <p>Cascading Style Sheets, fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages presentable. CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independently of the HTML that makes up each web page. It describes how a webpage should look: it prescribes colours, fonts, spacing, and much more. In short, you can make your website look however you want. CSS lets developers and designers define how it behaves, including how elements are positioned in the browser.
+
+        While HTML uses tags, CSS uses rulesets. CSS is easy to learn and understand, but it provides powerful control over the presentation of an HTML document.</p>
+      <p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
+
+        CSS is among the core languages of the open web and is standardized across Web browsers according to W3C specifications. Previously, the development of various parts of CSS specification was done synchronously, which allowed the versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, or even CSS3. There will never be a CSS3 or a CSS4; rather, everything is now CSS without a version number.</p>
+      <h3>CSS is among the core languages of the open web and is standardized across Web browsers according to W3C specifications.</h3>
+    </div>
+    
+    </body>
+</html>
